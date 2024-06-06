@@ -29,11 +29,11 @@ check_kernel_parameters() {
 # Function to verify dracut-fips package
 check_dracut_fips() {
     echo ""
-    echo "Verifying dracut-fips package..."
-    if rpm -q dracut-fips > /dev/null 2>&1; then
-        echo "dracut-fips package is installed."
+    echo "Verifying dracut package..."
+    if rpm -q dracut > /dev/null 2>&1; then
+        echo "dracut package is installed."
     else
-        echo "dracut-fips package is not installed."
+        echo "dracut package is not installed."
     fi
     echo ""
     read -p "Press Enter to return to the main menu..."
@@ -104,7 +104,7 @@ while true; do
     echo
     echo "1. Check if FIPS mode is enabled"
     echo "2. Verify kernel boot parameters"
-    echo "3. Verify dracut-fips package"
+    echo "3. Verify dracut package"
     echo "4. Check OpenSSL for FIPS"
     echo "5. Check OpenSSH configuration"
     echo "6. Verify NSS for FIPS"
